@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>My-Diary</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h2>Write diary</h2>
+    <form action="" method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>
