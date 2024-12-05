@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <title>My-Diary</title>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    <h1>My-diary</h1>
-    <p>{{ datetime_now }}</p>
-    <br />
-    <a href="{%url 'diary:page_create'%}">Write diary</a>
-  </body>
-</html>
+{% extends "base/diary_base.html" %}
+{% block body %}
+<p>{{ datetime_now }}</p>
+<br>
+<a href="{% url "diary:page_create" %}">Write Diary</a>
+<br>
+<a href="{% url "diary:page_list" %}">Diary List</a>
+{% endblock  %}
+
