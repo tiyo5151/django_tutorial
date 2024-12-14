@@ -31,13 +31,14 @@ class PageCreateView(View):
 
 class PageListView(View):
     def get(self, request):
+        # print(Page.objects.all())
         page_list = Page.objects.order_by("-page_date")
         return render(request, "diary/page_list.html", {"page_list": page_list})
 
 
 class PageDetailView(View):
     def get(self, request, id):
-        page = get_object_or_404(Page, pk=id)
+        page = get_object_or_404(Page, id=id)
         return render(request, "diary/page_detail.html", {"page": page})
 
 
