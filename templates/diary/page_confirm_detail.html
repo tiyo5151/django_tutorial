@@ -1,11 +1,14 @@
 {% extends "base/diary_base.html" %} {% block body %}
+<form action="" method="post">
+  {% csrf_token %}
+  <p>Do you confirm to delete this page?</p>
+  <button type="submit">Delete</button>
+</form>
 <h2>{{page.title}}</h2>
 <div>{{page.page_date}}</div>
 <div>{{page.body|linebreaksbr}}</div>
 {% if page.picture %}
 <img src="{{ page.picture.url }}" alt="" />
 {% endif %}
-<br>
-<a href="{% url "diary:page_update" page.id%}">Edit</a>
-<a href="{% url "diary:page_delete" page.id%}">Delete</a>
+<br />
 {% endblock %}
