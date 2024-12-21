@@ -1,8 +1,12 @@
+<!-- filepath: /home/tiyo5151/django-project/django-tutorial/myproject/templates/base/diary_base.html -->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <title>My-Diary</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "diary/css/base.css" %}" />
+    <script src="{% static "diary/js/base.js" %}"></script>
   </head>
   <body>
     <h1><a href="{% url "diary:index" %}">My-diary</a></h1>

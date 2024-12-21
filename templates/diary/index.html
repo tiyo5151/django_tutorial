@@ -1,8 +1,13 @@
 {% extends "base/diary_base.html" %}
 {% block body %}
-<p>{{ datetime_now }}</p>
+<div id="clock"></div>
 <br>
 <a href="{% url "diary:page_create" %}">Write Diary</a>
 <br>
 <a href="{% url "diary:page_list" %}">Diary List</a>
+<br>
+<form action="{% url "accounts:logout" %}" method="post">
+  {% csrf_token %}
+  <button type="submit" class="button">logout</button>
+</form>
 {% endblock  %}

@@ -2,7 +2,7 @@
 <h2>Write diary</h2>
 <form action="" method="post" enctype="multipart/form-data">
   {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Save</button>
+  <button type="submit" class="button">Save</button>
 </form>
 
 {% endblock %}

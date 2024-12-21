@@ -2,7 +2,7 @@
 <form action="" method="post">
   {% csrf_token %}
   <p>Do you confirm to delete this page?</p>
-  <button type="submit">Delete</button>
+  <button type="submit" class="button">Delete</button>
 </form>
 <h2>{{page.title}}</h2>
 <div>{{page.page_date}}</div>
